@@ -16,6 +16,8 @@ class Products extends StatelessWidget {
         children: <Widget>[
           Image.asset(products[index]["image"]),
           Text(products[index]['title']),
+
+
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -26,7 +28,7 @@ class Products extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (BuildContext context) => ProductPage(
-                            products[index]['title'], products[index]['imageUrl']),
+                            products[index]['title'], products[index]['image'], products[index]['price']),
                       ),
                     )
               )
